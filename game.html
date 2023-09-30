@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <audio autoplay loop>
+        <source src="{{url_for('static',filename= 'High Noon - TrackTribe.mp3') }}">
+        This broswerdoes not support HTML5 audio
+       </audio>
+       <script src="{{url_for('static',filename= 'script.js') }}">
+    </script>
+</head>
+     <body id="dark"><h1>MATHOPS CHALLANGE</h1>
+        
+    
+    <div>
+        <h3>Become an  excellent Mathematician</h3>
+        <h3>Dont know where to start from</h3>
+        <h3><a href="{{url_for('static',filename= 'new.html') }}">Just click here</a></h3>
+        <h3><a href="{{url_for('static',filename= 'calculator.html') }}">calculator</a></h3>
+    <p>Problem: {{ current_problem }}</p>
+    <form action="/check_answer" method="post">
+        <input type="number" name="user_answer" step="any" required><br><br>
+        <button type="submit">Check Answer</button>
+    </form>
+    <p>Score: {{ score }} / Attempts: {{ attempts }}</p>
+    </div>
+    <footer><h2><a href="register">signup</a></h2></footer>
+    </body>
+    <label>Themes</label><br>
+    <input type="button" onclick="dark()" value="darkmode"></option>
+    <input type="button" onclick="light()" value="lightmode"></option>
+    <input type="button" onclick="darkblue()" value="darkblue"></option>
+    
+    
+  
+ 
+    
+</html>
+
